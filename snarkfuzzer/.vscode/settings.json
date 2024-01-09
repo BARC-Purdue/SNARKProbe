@@ -1,0 +1,12 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "files.associations": {
+        "*.tcc": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "compile.h": "c",
+        "frameobject.h": "c",
+        "traceback.h": "c",
+        "ostream": "cpp"
+    }
+}

@@ -1,0 +1,69 @@
+Generator Variables:
+#12_18: not affine, check to_affine
+l,Int,num_instance_variables,generator.rs,136
+
+A,ArrayFr,a,generator.rs,141 #p a.buf.ptr.pointer.pointer[0]
+B,ArrayFr,b,generator.rs,141
+C,ArrayFr,c,generator.rs,141
+
+alpha,Fr,alpha,generator.rs,43
+beta,Fr,beta,generator.rs,44
+gamma,Fr,gamma,generator.rs,45
+delta,Fr,delta,generator.rs,46
+
+g,G1,g1_generator,generator.rs,48 #not affine
+h,G2,g2_generator,generator.rs,49 #not affine
+
+g_alpha,G1,vk.alpha_g1,generator.rs,257
+g_beta,G1,beta_g1,generator.rs,194 # not affine (affine in pk, return val)
+g_delta,G1,delta_g1,generator.rs,196 # not affine (affine in pk, return val)
+h_beta,G2,vk.beta_g2,generator.rs,257
+h_gamma,G2,vk.gamma_g2,generator.rs,257
+h_delta,G2,vk.delta_g2,generator.rs,257
+
+S_k,ArrayG,vk.gamma_abc_g1,generator.rs,257
+f_mid,ArrayG,l_query,generator.rs,264 
+
+Prover Variables:
+
+w1,ArrayFr,input_assignment,prover.rs,84
+w2,ArrayFr,aux_assignment,prover.rs,84
+
+v_k,ArrayG,pk.a_query,prover.rs,232
+w_k,ArrayG,pk.b_g1_query,prover.rs,232 
+w_kP,ArrayG,pk.b_g2_query,prover.rs,232
+hh,ArrayG,pk.h_query,prover.rs,232
+hc,ArrayFr,h,prover.rs,249 # qap_wit.coefficients_for_H
+f_mid,ArrayG,pk.l_query,prover.rs,232
+
+g_alpha,G1,pk.vk.alpha_g1,prover.rs,232
+g_beta,G1,pk.beta_g1,prover.rs,232
+g_delta,G1,pk.delta_g1,prover.rs,232
+h_beta,G2,pk.vk.beta_g2,prover.rs,232
+h_delta,G2,pk.vk.delta_g2,prover.rs,232
+
+r,Fr,r,prover.rs,232
+u,Fr,s,prover.rs,232
+
+A,G1,new_a,prover.rs,289 #not affine
+B,G2,new_b,prover.rs,290 #not affine
+C,G1,new_c,prover.rs,291 
+
+
+Verifier Variables:
+#QUESTION: result is boolean value at the end? what name to get value?
+
+A,G1,proof.a,verifier.rs,46
+B,G2,proof.b,verifier.rs,46
+C,G1,proof.c,verifier.rs,46
+
+a,ArrayFr,public_inputs,verifier.rs,70
+S_k,ArrayG,pvk.vk.gamma_abc_g1,verifier.rs,46
+H,G2,pvk.vk.gamma_g2,verifier.rs,46
+D,G2,pvk.vk.delta_g2,verifier.rs,46
+
+PQ,Fq12,pvk.alpha_g1_beta_g2,verifier.rs,46 #fq12 -> fq6 -> fq2 -> fq -> c0, c1
+P,G1,pvk.vk.alpha_g1,verifier.rs,46
+Q,G2,pvk.vk.beta_g2,verifier.rs,46
+
+#accept,Int,?,verifier.rs,60 //how to locate the line for verified in generated code

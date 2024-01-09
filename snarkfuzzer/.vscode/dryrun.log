@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/media/fanyo/snark/snarktool/model'
+make: Leaving directory '/media/fanyo/snark/snarktool/model'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

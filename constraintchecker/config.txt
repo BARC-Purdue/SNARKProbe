@@ -1,0 +1,14 @@
+EXTRACTION = ON
+
+LIBRARY_CHOICE = libsnark
+
+CURVE_CHOICE = BN128
+
+DOMAIN_FUZZING = OFF
+DOMAIN_FUZZING_TOOL = DEFAULT
+DOMAIN_TEST_SIZE = 100
+
+OPT_TIME = 0.1
+QF_BV = OFF
+
+LOGFILE = /media/fanyo/snark/snarktool/constraints/log.txt

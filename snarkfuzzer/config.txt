@@ -1,0 +1,32 @@
+# Library parameters
+LIBRARY = LIBSNARK
+LIBRARY_PATH = DEFAULT
+COMPILE_PATH = DEFAULT
+MONTGOMERY_OUTPUT = ON
+
+PROTOCOL = PGHR13
+ELLIPTICCURVE = BN128
+ECCLIBRARY = py_ecc
+
+# Proportion for each type of fuzzing
+GEN_INVALID = 0#20
+GEN_VALID = 0#20
+MUT_INVALID = 10#20
+MUT_VALID = 0#20
+
+# Generation valid fuzzing parameters
+NUM_INPUT_MIN = 20
+NUM_INPUT_MAX = 20
+NUM_CONSTRAINT_MIN = 30
+NUM_CONSTRAINT_MAX = 30
+
+RANDOM_WITNESS_MIN = 0
+RANDOM_WITNESS_MAX = 100
+
+# Generation invalid fuzzing parameters
+RANDOM_MATRIX_MIN = 0
+RANDOM_MATRIX_MAX = 100
+
+# Mutation valid fuzzing parameters
+MULTIPLY_MIN = 2
+MULTIPLY_MAX = 100
